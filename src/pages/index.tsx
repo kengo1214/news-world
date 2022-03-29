@@ -1,18 +1,25 @@
 import Head from "next/head";
-import MainLayout from "../layouts";
+import MainLayout from "../layouts/index";
 import styles from "../styles/Home.module.scss";
 import Article from "../components/article";
+import Nav from "../components/nav";
 
 export default function Home(props) {
-  // console.log(props.topArticles);
   return (
     <MainLayout>
       <Head>
-        <title>Simple News</title>
+        <title>News World</title>
       </Head>
-
-      <div className={styles.main}>
-        <Article title="headlines" articles={props.topArticles} />
+      <div className={styles.contents}>
+        <div className={styles.nav}>
+          <nav>
+            <Nav />
+          </nav>
+        </div>
+        <div className={styles.blank} />
+        <div className={styles.main}>
+          <Article title="headlines" articles={props.topArticles} />
+        </div>
       </div>
     </MainLayout>
   );
