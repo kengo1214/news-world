@@ -1,5 +1,6 @@
 import Head from "next/head";
-import MainLayout from "../layouts/index";
+import MainLayout from "../layouts";
+// import MainLayout from "../layouts/index";にしても意味なかった
 import styles from "../styles/Home.module.scss";
 import Article from "../components/article";
 import Nav from "../components/nav";
